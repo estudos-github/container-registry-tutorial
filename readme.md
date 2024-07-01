@@ -12,12 +12,15 @@ echo $CR_PAT | docker login ghcr.io -u YOUR_USERNAME --password-stdin
 1) Construir a imagem localmente
    
 ```bash
-build -t IMAGE_NAME:latest .
+docker build -t IMAGE_NAME:latest .
 ```
+
 2) Fazer push da imagem. Isso cria um pacote na organização
 ```bash
 docker push ghcr.io/NAMESPACE/IMAGE_NAME:latest
 ```
+>Atenção: O nome da imagem deve estar naquele padrão, caso não esteja renomear: ``docker tag 38f737a91f39 ghcr.io/NAMESPACE/NEW_IMAGE_NAME:latest``
+
 3) Associar o pacote criado à um repositório da organização.
 
 ## Utilizar uma imagem 
