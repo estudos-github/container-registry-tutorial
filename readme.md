@@ -5,7 +5,8 @@
 export CR_PAT=YOUR_TOKEN
 echo $CR_PAT | docker login ghcr.io -u YOUR_USERNAME --password-stdin
 ```
->Atenção: Personal access token (classic) deve conter as permissões: `read:packages`, `write:packages` e `delete:packages`.
+> [!NOTE]  
+> Personal access token (classic) deve conter as permissões: `read:packages`, `write:packages` e `delete:packages`.
 
 ## Publicar uma imagem  
 
@@ -19,7 +20,8 @@ docker build -t IMAGE_NAME:latest .
 ```bash
 docker push ghcr.io/NAMESPACE/IMAGE_NAME:latest
 ```
->Atenção: O nome da imagem deve estar naquele padrão, caso não esteja renomear: ``docker tag 38f737a91f39 ghcr.io/NAMESPACE/NEW_IMAGE_NAME:latest``
+> [!NOTE]  
+> O nome da imagem deve estar naquele padrão, caso não esteja renomear: ``docker tag 38f737a91f39 ghcr.io/NAMESPACE/NEW_IMAGE_NAME:latest``
 
 3) Associar o pacote criado à um repositório da organização.
 
